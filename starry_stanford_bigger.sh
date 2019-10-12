@@ -70,12 +70,12 @@ $NEURAL_STYLE \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 2048 \
+  -image_size 1024 \
   -num_iterations 200 \
   -output_image out4.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn -cudnn_autotune
+  -backend cudnn
 
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -84,12 +84,12 @@ $NEURAL_STYLE \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 3620 \
+  -image_size 1024 \
   -num_iterations 200 \
   -output_image out5.png \
   -tv_weight 0 \
   -gpu 0
-  -backend cudnn -cudnn_autotune
+  -backend cudnn -optimizer adam
 
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -98,9 +98,9 @@ $NEURAL_STYLE \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 4016 \
-  -num_iterations 200 \
+  -image_size 1024 \
+  -num_iterations 2000 \
   -output_image out6.png \
   -tv_weight 0 \
   -gpu 0
-  -backend cudnn -cudnn_autotune
+  -backend cudnn -optimizer adam
