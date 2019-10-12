@@ -70,7 +70,7 @@ $NEURAL_STYLE \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 2048 \
+  -image_size 1024 \
   -num_iterations 200 \
   -output_image out4.png \
   -tv_weight 0 \
@@ -82,11 +82,11 @@ $NEURAL_STYLE \
   -style_image $STYLE_IMAGE \
   -init image -init_image out4.png \
   -style_scale $STYLE_SCALE \
-  -print_iter 1 \
+  -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 2350 \
-  -num_iterations 200 \
+  -image_size 1024 \
+  -num_iterations 2000 \
   -output_image out5.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn -optimizer adam
+  -backend cudnn
