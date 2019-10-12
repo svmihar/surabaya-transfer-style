@@ -1,8 +1,0 @@
-*.swp
-out*.png
-*.png
-*.jpg
-*.pyc
-*.pth
-models/
-!models/download_models.py
