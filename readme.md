@@ -8,6 +8,8 @@ original image |  starry night
 ![](/img/../examples/inputs/surabaya.jpg)  |  ![](img/out6.png)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg)
+
+
 original image | greate wave off
 :-------------------------:|:-------------------------:
 ![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_wave.png)

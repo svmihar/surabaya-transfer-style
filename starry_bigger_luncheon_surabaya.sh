@@ -85,7 +85,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 200 \
   -output_image out5.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -99,7 +99,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image out6.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -113,7 +113,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 200 \
   -output_image out7.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -127,7 +127,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image out8.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -141,7 +141,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image out9.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -155,7 +155,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image surabaya_luncheon/out10.png \
   -tv_weight 0 \
   -gpu $GPU \
