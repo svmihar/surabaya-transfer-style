@@ -3,8 +3,8 @@
 # wget -c https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg -O starry_night_gigapixel.jpg
 # Or you can manually download the image from here: https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
 
-STYLE_IMAGE=starry_night_gigapixel.jpg
-CONTENT_IMAGE=examples/inputs/surabaya.jpg
+STYLE_IMAGE=luncheon.jpg
+CONTENT_IMAGE=examples/inputs/its.jpg
 
 STYLE_WEIGHT=5e2
 STYLE_SCALE=1.0

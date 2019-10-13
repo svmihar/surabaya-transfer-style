@@ -3,8 +3,8 @@
 # wget -c https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg -O starry_night_gigapixel.jpg
 # Or you can manually download the image from here: https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
 
-STYLE_IMAGE=starry_night_gigapixel.jpg
-CONTENT_IMAGE=examples/inputs/surabaya.jpg
+STYLE_IMAGE=luncheon.jpg
+CONTENT_IMAGE=examples/inputs/its.jpg
 
 STYLE_WEIGHT=5e2
 STYLE_SCALE=1.0
@@ -82,25 +82,81 @@ $NEURAL_STYLE \
   -style_image $STYLE_IMAGE \
   -init image -init_image out4.png \
   -style_scale $STYLE_SCALE \
-  -print_iter 1 \
+  -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 200 \
+  -num_iterations 2000 \
   -output_image out5.png \
   -tv_weight 0 \
-  -gpu 0
-  -backend cudnn -optimizer adam
+  -gpu $GPU \
+  -backend cudnn
 
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
   -init image -init_image out5.png \
   -style_scale $STYLE_SCALE \
-  -print_iter 1 \
+  -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 2000 \
   -output_image out6.png \
   -tv_weight 0 \
-  -gpu 0
-  -backend cudnn -optimizer adam
+  -gpu $GPU \
+  -backend cudnn
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image out6.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 2000 \
+  -output_image out7.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image out7.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 2000 \
+  -output_image out8.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image out8.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 2000 \
+  -output_image out9.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image out9.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 2000 \
+  -output_image out10.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn
