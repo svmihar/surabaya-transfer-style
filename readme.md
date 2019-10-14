@@ -17,13 +17,19 @@ original image | greate wave off
 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg)
+
+
 original image | greate wave off
 :-------------------------:|:-------------------------:
 ![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_luncheon.png)
 ![](/img/../examples/inputs/surabaya.jpg)  |  ![](img/surabaya_luncheon.png)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/56/Isaak_Ilitsch_Lewitan_005.jpg)
-![](img/its_levitan.png)
+original image | greate wave off
+:-------------------------:|:-------------------------:
+![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_levitan.png)
+![](/img/../examples/inputs/surabaya.jpg)  |  ![]()
+
 
 "**insert famous painters name** painted **insert painting with different style**"
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Isaac_Levitan_-_Golden_autumn._Slobodka_-_Google_Art_Project.jpg/1600px-Isaac_Levitan_-_Golden_autumn._Slobodka_-_Google_Art_Project.jpg)
