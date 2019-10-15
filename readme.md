@@ -10,20 +10,35 @@ original image |  starry night
 ![](https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg)
 
 
-original image | greate wave off
+original image | great wave off
 :-------------------------:|:-------------------------:
 ![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_wave.png)
-![](/img/../examples/inputs/surabaya.jpg)  |  ![]()
+![](/img/../examples/inputs/surabaya.jpg)  |  ![](img/surabaya_waveoff.png)
 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg)
-original image | greate wave off
+
+
+original image | Luncheon of the Boating Party
 :-------------------------:|:-------------------------:
 ![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_luncheon.png)
 ![](/img/../examples/inputs/surabaya.jpg)  |  ![](img/surabaya_luncheon.png)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/56/Isaak_Ilitsch_Lewitan_005.jpg)
-![](img/its_levitan.png)
+
+
+original image | levitan
+:-------------------------:|:-------------------------:
+![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_levitan.png)
+![](/img/../examples/inputs/surabaya.jpg)  |  ![](img/surabaya_levitan.png)
+
+![](https://upload.wikimedia.org/wikipedia/commons/f/ff/Camille_Pissarro_-_Boulevard_Montmartre%2C_Spring_-_Google_Art_Project.jpg)
+
+original image | montmartre
+:-------------------------:|:-------------------------:
+![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its_montmartre.png)
+![](/img/../examples/inputs/surabaya.jpg)  |  ![](img/surabaya_montmartre.png)
+
 
 "**insert famous painters name** painted **insert painting with different style**"
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Isaac_Levitan_-_Golden_autumn._Slobodka_-_Google_Art_Project.jpg/1600px-Isaac_Levitan_-_Golden_autumn._Slobodka_-_Google_Art_Project.jpg)
@@ -31,7 +46,7 @@ original image | greate wave off
 ![](img/painting_on_painting.png)
 
 ## training
-using the bash script, all the pictures were trained 5 times where each layer were configured like this, gradually increasing on `image_size`:
+using the bash script, all the pictures were trained 10 times where each layer were configured like this, gradually increasing on `image_size`, and `init_image` based on previous result:
 ```bash
 
 python3 neural_style.py \

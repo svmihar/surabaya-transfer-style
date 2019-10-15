@@ -3,7 +3,7 @@
 # wget -c https://upload.wikimedia.org/wikipedia/commons/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg -O starry_night_gigapixel.jpg
 # Or you can manually download the image from here: https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
 
-STYLE_IMAGE=luncheon.jpg
+STYLE_IMAGE=levitan.jpg
 CONTENT_IMAGE=examples/inputs/surabaya.jpg
 
 STYLE_WEIGHT=5e2
@@ -85,7 +85,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 200 \
+  -num_iterations 500 \
   -output_image out5.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -113,7 +113,7 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 200 \
+  -num_iterations 500 \
   -output_image out7.png \
   -tv_weight 0 \
   -gpu $GPU \
@@ -154,9 +154,9 @@ $NEURAL_STYLE \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 1024 \
+  -image_size 1500 \
   -num_iterations 500 \
-  -output_image surabaya_luncheon/out10.png \
+  -output_image surabaya_levitan/out10.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn

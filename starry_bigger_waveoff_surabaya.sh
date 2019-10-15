@@ -154,7 +154,7 @@ $NEURAL_STYLE \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
-  -image_size 1024 \
+  -image_size 1500 \
   -num_iterations 500 \
   -output_image surabaya_waveoff/out10.png \
   -tv_weight 0 \
