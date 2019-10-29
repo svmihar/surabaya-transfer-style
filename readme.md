@@ -65,6 +65,10 @@ python3 neural_style.py \
 
 ```
 
+
+## tpu vs gpu
+
+
 ## credits
 - [original project based on neural algorithm of artistic style pytorch implementation](https://github.com/ProGamerGov/neural-style-pt)
 - [a code based on](https://github.com/jcjohnson/neural-style)
