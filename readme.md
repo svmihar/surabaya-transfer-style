@@ -2,6 +2,7 @@
 
 ![](https://cdn.shopify.com/s/files/1/0627/1477/products/Starry_Night_03d43ad7-d879-40ef-8525-5f3c38918acc_grande.jpg?v=1542461422)
 
+
 original image |  starry night
 :-------------------------:|:-------------------------:
 ![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its.png)
@@ -46,7 +47,10 @@ original image | montmartre
 ![](img/painting_on_painting.png)
 
 ## training
+at initiation, uses a random image perception,     
 using the bash script, all the pictures were trained 10 times where each layer were configured like this, gradually increasing on `image_size`, and `init_image` based on previous result:
+
+
 ```bash
 
 python3 neural_style.py \
@@ -67,6 +71,9 @@ python3 neural_style.py \
 
 
 ## tpu vs gpu
+running on `starry_bigger_time.sh`, measured on `time_check.py`
+- tpu time: not supported lol  
+- gpu time: 3045.925956964493 s 
 
 
 ## credits
