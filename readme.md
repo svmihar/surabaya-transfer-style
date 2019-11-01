@@ -74,7 +74,8 @@ python3 neural_style.py \
 running on `starry_bigger_time.sh`, measured on `time_check.py`
 - tpu time: not supported lol  
 - gpu time: 3045.925956964493 s 
-
+## todo: 
+- [ ] change the bash files to airflow scheduler
 
 ## credits
 - [original project based on neural algorithm of artistic style pytorch implementation](https://github.com/ProGamerGov/neural-style-pt)
