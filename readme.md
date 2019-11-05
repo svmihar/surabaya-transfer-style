@@ -72,10 +72,15 @@ python3 neural_style.py \
 
 ## tpu vs gpu
 running on `starry_bigger_time.sh`, measured on `time_check.py`
-- tpu time: not supported lol  
-- gpu time: 3045.925956964493 s 
+- gpu@colab time: 3045.925956964493 s 
+- gpu@p5000 time: 971.1943960189819 s 
+
+
+
 ## todo: 
-- [ ] change the bash files to airflow scheduler
+- [ ] change to celery worker
+- [ ] make some quasi front end, either flask or telegram bot
+    kebutuhan demo bray
 
 ## credits
 - [original project based on neural algorithm of artistic style pytorch implementation](https://github.com/ProGamerGov/neural-style-pt)

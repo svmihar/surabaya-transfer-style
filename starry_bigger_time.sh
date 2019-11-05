@@ -156,7 +156,7 @@ $NEURAL_STYLE \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1500 \
   -num_iterations 500 \
-  -output_image surabaya_waveoff/out10.png \
+  -output_image out10.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
