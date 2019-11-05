@@ -78,6 +78,9 @@ running on `starry_bigger_time.sh`, measured on `time_check.py`
 
 
 ## todo: 
+- work on some styles: 
+    - [ ] handwriting 
+    - [ ] maps (tangerang, surabaya)
 - [ ] change to celery worker
 - [ ] make some quasi front end, either flask or telegram bot
     kebutuhan demo bray
