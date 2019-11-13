@@ -47,7 +47,7 @@ original image | montmartre
 ![](img/painting_on_painting.png)
 
 ## training
-at initiation, uses a random image perception,     
+at initiation, uses a random image perception,
 using the bash script, all the pictures were trained 10 times where each layer were configured like this, gradually increasing on `image_size`, and `init_image` based on previous result:
 
 
@@ -72,18 +72,22 @@ python3 neural_style.py \
 
 ## tpu vs gpu
 running on `starry_bigger_time.sh`, measured on `time_check.py`
-- gpu@colab time: 3045.925956964493 s 
-- gpu@p5000 time: 971.1943960189819 s 
+- gpu@colab time: 3045.925956964493 s
+- gpu@p5000 time: 971.1943960189819 s
 
 
 
-## todo: 
-- work on some styles: 
-    - [ ] handwriting 
+## todo:
+- work on some styles:
+    - [ ] handwriting
     - [ ] maps (tangerang, surabaya)
 - [ ] change to celery worker
 - [ ] make some quasi front end, either flask or telegram bot
     kebutuhan demo bray
+    - ![image](img/Untitled&#32;Diagram.png)
+    - make some parametrized ipynb? python script?
+    - how to send and get images from telegram bot?
+      - process to imgur? tetep aja harus ambil image dulu thoo
 
 ## credits
 - [original project based on neural algorithm of artistic style pytorch implementation](https://github.com/ProGamerGov/neural-style-pt)
