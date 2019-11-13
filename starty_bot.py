@@ -4,6 +4,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import telegram
 from pathlib import Path
 from functools import wraps
+import json
 
 
 def send_action(action):
@@ -22,9 +23,10 @@ def send_action(action):
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-
+with open('secrets.json') as f:
+    key = json.load(f)
 updater = Updater(
-    token='986200569:AAGpejuObNsxpmsqCtd7awdHUv3XAe6B8_k', use_context=True)
+    token=key[0]['api_key'], use_context=True)
 dispatcher = updater.dispatcher
 send_upload_photo_action = send_action(telegram.ChatAction.UPLOAD_PHOTO)
 
