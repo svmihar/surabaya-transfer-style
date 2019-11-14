@@ -82,12 +82,6 @@ running on `starry_bigger_time.sh`, measured on `time_check.py`
     - [ ] handwriting
     - [x] maps (tangerang, surabaya)
 - [x] make some quasi front end, either flask or telegram bot
-    kebutuhan demo bray
-    - ![image](img/Untitled&#32;Diagram.png)
-    - make some parametrized ipynb? python script?
-    - how to send and get images from telegram bot?
-      - process to imgur? tetep aja harus ambil image dulu thoo
-
 ## credits
 - [original project based on neural algorithm of artistic style pytorch implementation](https://github.com/ProGamerGov/neural-style-pt)
 - [a code based on](https://github.com/jcjohnson/neural-style)

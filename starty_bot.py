@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 import logging
+import time
+from random import randint
+import os
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import telegram
 from pathlib import Path
@@ -33,54 +36,29 @@ send_upload_photo_action = send_action(telegram.ChatAction.UPLOAD_PHOTO)
 
 def start(update, context):
     context.bot.send_message(
-        chat_id=update.effective_chat.id, text='hellow world!')
-
-
-# def echo(update, context):
-#     context.bot.send_message(chat_id=update.effective_chat.id,
-#                              text=update.message.text)
-
-def unknown(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id,
-                             text=f"'{update.message.text}' ini apaan fak? gak ngerti gue")
-
-
-@send_upload_photo_action
-def send_photo(update, context):
-    from random import choice
-    pics = choice([filename for filename in Path('img').rglob('*.png')])
-    print(f'sending {pics}')
-    context.bot.send_photo(
-        chat_id=update.effective_chat.id, photo=open(pics, 'rb'))
-
-
-def reply_photo(update: telegram.Update, context: telegram.Bot):
-    file = context.bot.getFile(update.message.photo[-1].file_id)
-    logging.info(f'file_id: {str(update.message.photo[-1].file_id)}')
-    file.download('saved_image.jpg')
-    context.bot.send_photo(chat_id=update.effective_chat.id,
-                           photo=open('saved_image.jpg', 'rb'))
+        chat_id=update.effective_chat.id, text='hello, please send me a pic to transfer my vangogh style to...')
 
 
 @send_upload_photo_action
 def bw_photo(update, context):
     # check if photo url is valid
 
-    from PIL import Image
-    from PIL import ImageFilter
-    from io import BytesIO
-    from random import randint
-    import os
 
     file = context.bot.getFile(update.message.photo[-1].file_id)
     temp_filename = f'{randint(1000,100000)}'
     logging.info(f'getting: {file}')
     os.chdir('cycleGAN/')
-    file.download(f'datasets/vangogh2photo/testA/{temp_filename}.jpg')
+    dir = f'datasets/vangogh2photo/testA/'
+    if not os.path.exists(dir): 
+        os.makedirs(dir)
+    file.download(f'{dir}/{temp_filename}.jpg')
     logging.info('mikir bentar')
+    start = time.time()
     os.system('python test.py --dataroot ./datasets/vangogh2photo --name style_vangogh_pretrained --model test --no_dropout --preprocess scale_width --load_size 1024')  
+    update.message.reply_text(f'took {time.time() - start} s')
+    logging.info(f'took {time.time() - start} s')
     logging.info('selesai mikir')
-
+    logging.info('sending photo now')
     context.bot.send_photo(chat_id=update.effective_chat.id,
                            photo=open(f'results/style_vangogh_pretrained/test_latest/images/{temp_filename}_fake.png', 'rb'))
     os.system(f'rm results/style_vangogh_pretrained/test_latest/images/*.png')
@@ -88,19 +66,53 @@ def bw_photo(update, context):
 
     os.chdir('../')
 
+@send_upload_photo_action
+def linked_photo(update, context): 
+    # check if photo url is valid
+    link = update.message.text
+    logging.info(link)
+    try: 
+        if link.endswith('.png') or link.endswith('.jpg'): 
+            update.message.reply_text('i got your link famm, now gotta think hard.. 💆🏾')
+            import requests 
+            from PIL import Image
+            from io import BytesIO
+
+            os.chdir('cycleGAN/')
+            temp_filename = f'{randint(1000,100000)}'
+            r = requests.get(link).content
+            i = Image.open(BytesIO(r))
+            dir = f'datasets/vangogh2photo/testA/'
+            if not os.path.exists(dir): 
+                os.makedirs(dir)
+            i.save(f'datasets/vangogh2photo/testA/{temp_filename}.jpg')
+            start =time.time()
+            os.system('python test.py --dataroot ./datasets/vangogh2photo --name style_vangogh_pretrained --model test --no_dropout --preprocess scale_width --load_size 1024')  
+            update.message.reply_text(f'took {time.time() - start} s')
+            logging.info(f'took {time.time() - start} s')
+            logging.info('selesai mikir')
+            logging.info('sending photo now')
+            context.bot.send_photo(chat_id=update.effective_chat.id,
+                                   photo=open(f'results/style_vangogh_pretrained/test_latest/images/{temp_filename}_fake.png', 'rb'))
+            os.system(f'rm results/style_vangogh_pretrained/test_latest/images/*.png')
+            os.system(f'rm datasets/vangogh2photo/testA/*.jpg')
+            os.chdir('../')
+        else: 
+            context.bot.send_message(chat_id=update.effecttive_chat.id, text='wrong image url')
+    except Exception as e: 
+        error = str(e)
+        logging.info(error)
+        context.bot.send_message(chat_id=update.effective_chat.id, text='are you sure the url is right?')
+
+
+
 
 start_handler = CommandHandler('start', start)
-photo_handler = CommandHandler('photo', send_photo)
-# echo_handler = MessageHandler(Filters.text, echo)
-# reply_photo_handler = MessageHandler(Filters.photo, reply_photo)
-unknown_handler = MessageHandler(Filters.command, unknown)
 bw_handler = MessageHandler(Filters.photo, bw_photo)
-# dispatcher.add_handler(echo_handler)
+link_handler = MessageHandler(Filters.text, linked_photo)
 dispatcher.add_handler(start_handler)
-# dispatcher.add_handler(reply_photo_handler)
-dispatcher.add_handler(photo_handler)
+dispatcher.add_handler(link_handler)
 dispatcher.add_handler(bw_handler)
-dispatcher.add_handler(unknown_handler)
 logging.info('success adding now starting bot...')
 logging.info('bot started')
 updater.start_polling()
