@@ -73,18 +73,20 @@ def bw_photo(update, context):
     import os
 
     file = context.bot.getFile(update.message.photo[-1].file_id)
-    temp_filename = f'{randint(1000,100000)}.jpg'
+    temp_filename = f'{randint(1000,100000)}'
     logging.info(f'getting: {file}')
-    file.download(temp_filename)
+    os.chdir('cycleGAN/')
+    file.download(f'datasets/vangogh2photo/testA/{temp_filename}.jpg')
+    logging.info('mikir bentar')
+    os.system('python test.py --dataroot ./datasets/vangogh2photo --name style_vangogh_pretrained --model test --no_dropout --preprocess scale_width --load_size 1024')  
+    logging.info('selesai mikir')
 
-    image_object = Image.open(temp_filename)
-    sharpened1 = image_object.filter(ImageFilter.FIND_EDGES)
-    sharpened1.save(temp_filename)
-
-    logging.info('finished')
     context.bot.send_photo(chat_id=update.effective_chat.id,
-                           photo=open(temp_filename, 'rb'))
-    os.system(f'rm {temp_filename}')
+                           photo=open(f'results/style_vangogh_pretrained/test_latest/images/{temp_filename}_fake.png', 'rb'))
+    os.system(f'rm results/style_vangogh_pretrained/test_latest/images/*.png')
+    os.system(f'rm datasets/vangogh2photo/testA/*.jpg')
+
+    os.chdir('../')
 
 
 start_handler = CommandHandler('start', start)
