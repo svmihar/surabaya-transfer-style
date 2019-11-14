@@ -4,5 +4,6 @@ out*.png
 *.jpg
 *.pyc
 *.pth
+!cycleGAN/checkpoints/style_vangogh_pretrained/latest_net_G.pth
 models/
 !models/download_models.py
