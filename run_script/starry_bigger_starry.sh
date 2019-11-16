@@ -4,7 +4,7 @@
 # Or you can manually download the image from here: https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
 
 STYLE_IMAGE=starry.jpg
-CONTENT_IMAGE=examples/inputs/surabaya.jpg
+CONTENT_IMAGE=examples/inputs/jalanan_its.jpg
 
 STYLE_WEIGHT=5e2
 STYLE_SCALE=1.0
@@ -75,7 +75,7 @@ $NEURAL_STYLE \
   -output_image starry_night/out4.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
 
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -85,11 +85,11 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image starry_night/out5.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
 
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -99,11 +99,11 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image starry_night/out6.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
 
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -113,11 +113,11 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image starry_night/out7.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
 
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -127,11 +127,11 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image starry_night/out8.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
 
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -141,11 +141,11 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image starry_night/out9.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
 
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
@@ -155,8 +155,157 @@ $NEURAL_STYLE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
-  -num_iterations 2000 \
+  -num_iterations 500 \
   -output_image starry_night/out10.png \
   -tv_weight 0 \
   -gpu $GPU \
-  -backend cudnn
+  -backend cudnn -cudnn_autotune
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out10.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/ou11.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/ou11.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out12.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out12.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out13.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out13.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out14.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out14.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out15.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out15.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out16.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out16.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out17.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out17.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out18.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out18.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out19.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
+  $NEURAL_STYLE \
+  -content_image $CONTENT_IMAGE \
+  -style_image $STYLE_IMAGE \
+  -init image -init_image starry_night/out19.png \
+  -style_scale $STYLE_SCALE \
+  -print_iter 10 \
+  -style_weight $STYLE_WEIGHT2 \
+  -image_size 1024 \
+  -num_iterations 500 \
+  -output_image starry_night/out20.png \
+  -tv_weight 0 \
+  -gpu $GPU \
+  -backend cudnn -cudnn_autotune
+
+
