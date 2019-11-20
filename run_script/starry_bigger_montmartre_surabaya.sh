@@ -5,6 +5,7 @@
 
 STYLE_IMAGE=montmartre.jpg
 CONTENT_IMAGE=examples/inputs/surabaya.jpg
+FOLDER_NAME=surabaya_montmartre
 
 STYLE_WEIGHT=5e2
 STYLE_SCALE=1.0
@@ -38,13 +39,13 @@ $NEURAL_STYLE \
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out1.png \
+  -init image -init_image $FOLDER_NAME/out1.png \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT \
   -image_size 512 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out2.png \
+  -output_image $FOLDER_NAME/out2.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn -cudnn_autotune
@@ -52,13 +53,13 @@ $NEURAL_STYLE \
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out2.png \
+  -init image -init_image $FOLDER_NAME/out2.png \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT \
   -image_size 1024 \
   -num_iterations 200 \
-  -output_image surabaya_montmartre/out3.png \
+  -output_image $FOLDER_NAME/out3.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn -cudnn_autotune
@@ -66,13 +67,13 @@ $NEURAL_STYLE \
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out3.png \
+  -init image -init_image $FOLDER_NAME/out3.png \
   -style_scale $STYLE_SCALE \
   -print_iter 1 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 200 \
-  -output_image surabaya_montmartre/out4.png \
+  -output_image $FOLDER_NAME/out4.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
@@ -80,13 +81,13 @@ $NEURAL_STYLE \
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out4.png \
+  -init image -init_image $FOLDER_NAME/out4.png \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out5.png \
+  -output_image $FOLDER_NAME/out5.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
@@ -94,13 +95,13 @@ $NEURAL_STYLE \
 $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out5.png \
+  -init image -init_image $FOLDER_NAME/out5.png \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out6.png \
+  -output_image $FOLDER_NAME/out6.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
@@ -108,13 +109,13 @@ $NEURAL_STYLE \
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out6.png \
+  -init image -init_image $FOLDER_NAME/out6.png \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out7.png \
+  -output_image $FOLDER_NAME/out7.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
@@ -122,13 +123,13 @@ $NEURAL_STYLE \
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out7.png \
+  -init image -init_image $FOLDER_NAME/out7.png \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out8.png \
+  -output_image $FOLDER_NAME/out8.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
@@ -136,13 +137,13 @@ $NEURAL_STYLE \
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out8.png \
+  -init image -init_image $FOLDER_NAME/out8.png \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1024 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out9.png \
+  -output_image $FOLDER_NAME/out9.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
@@ -150,13 +151,13 @@ $NEURAL_STYLE \
   $NEURAL_STYLE \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
-  -init image -init_image surabaya_montmartre/out9.png \
+  -init image -init_image $FOLDER_NAME/out9.png \
   -style_scale $STYLE_SCALE \
   -print_iter 10 \
   -style_weight $STYLE_WEIGHT2 \
   -image_size 1500 \
   -num_iterations 500 \
-  -output_image surabaya_montmartre/out10.png \
+  -output_image $FOLDER_NAME/out10.png \
   -tv_weight 0 \
   -gpu $GPU \
   -backend cudnn
