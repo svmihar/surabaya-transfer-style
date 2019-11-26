@@ -1,8 +1,6 @@
 # surabaya on various multi style transfer learning
 
-![](https://cdn.shopify.com/s/files/1/0627/1477/products/Starry_Night_03d43ad7-d879-40ef-8525-5f3c38918acc_grande.jpg?v=1542461422)
-
-
+![](img/5.gif)
 original image |  starry night
 :-------------------------:|:-------------------------:
 ![](https://www.its.ac.id/wp-content/uploads/2019/07/Gambar24-1024x683.jpg)  |  ![](img/its.png)
@@ -47,8 +45,9 @@ original image | montmartre
 ![](img/painting_on_painting.png)
 
 ## training
-at initiation, uses a random image perception,
-using the bash script, all the pictures were trained 10 times where each layer were configured like this, gradually increasing on `image_size`, and `init_image` based on previous result:
+![](img/random_init.png)
+at initiation, uses a randomly init (white noise) image,
+using the bash script, content and style pics will be trained 10 times where each layer were configured like the bash script below, gradually increasing on `image_size`, and making the `init_image` based on the output of previous result:
 
 
 ```bash
@@ -75,13 +74,14 @@ running on `starry_bigger_time.sh`, measured on `time_check.py`
 - gpu@colab time: 3045.925956964493 s
 - gpu@p5000 time: 971.1943960189819 s
 
+## neural-style-transfer bot
+I've created a telegram bot [@neuralstyletransferbot](t.me/neuralstyletransferbot) you can see the live demo here
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/fDdpxE2L0x0/0.jpg)](https://www.youtube.com/watch?v=fDdpxE2L0x0)
 
-## todo:
-- work on some styles:
-    - [ ] handwriting
-    - [x] maps (tangerang, surabaya)
-- [x] make some quasi front end, either flask or telegram bot
+## pycon 2019 slide
+you can view it [here](https://docs.google.com/presentation/d/1c86SwzRcmXntxrEtgKL7GJXfv0XwfStVOHuL5pOGaH8/edit#slide=id.g7445887bf7_0_57)
+
 ## credits
 - [original project based on neural algorithm of artistic style pytorch implementation](https://github.com/ProGamerGov/neural-style-pt)
 - [a code based on](https://github.com/jcjohnson/neural-style)
